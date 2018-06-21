@@ -1,30 +1,30 @@
 package julia;
 
 public class Matrix {
-    private double[][] _array;
+    private double[][] _a;
 
     public Matrix(int rows, int cols) {
         this(new double[rows][cols]);
     }
 
     public Matrix(double[][] array) {
-        _array = array;
+        _a = array;
     }
 
     public void set(int i, int j, double value) {
-        _array[i][j] = value;
+        _a[i][j] = value;
     }
 
     public double get(int i, int j) {
-        return _array[i][j];
+        return _a[i][j];
     }
 
     public int rows() {
-        return rowsOf(_array);
+        return rowsOf(_a);
     }
 
     public int cols() {
-        return colsOf(_array);
+        return colsOf(_a);
     }
 
     public static int rowsOf(double[][] a) {
@@ -36,15 +36,15 @@ public class Matrix {
     }
 
     public Matrix mul(double value) {
-        Matrix result = new Matrix(toArray());
+        Matrix res = new Matrix(toArray());
 
         for (int i = 0; i < rows(); ++i) {
             for (int j = 0; j < cols(); ++j) {
-                result._array[i][j] *= value;
+                res._a[i][j] *= value;
             }
         }
 
-        return result;
+        return res;
     }
 
     public Matrix mul(Matrix m){
@@ -61,7 +61,7 @@ public class Matrix {
         for (int i = 0; i < l; ++i) {
             for (int j = 0; j < n; ++j) {
                 for (int k = 0; k < m; ++k) {
-                    result._array[i][j] += a._array[i][k] * b._array[k][j];
+                    result._a[i][j] += a._a[i][k] * b._a[k][j];
                 }
             }
         }
@@ -70,13 +70,13 @@ public class Matrix {
     }
 
     public double[][] toArray() {
-        double[][] result = new double[rows()][cols()];
+        double[][] res = new double[rows()][cols()];
 
         for (int i = 0; i < rows(); ++i) {
-            System.arraycopy(_array[i], 0, result[i], 0, cols());
+            System.arraycopy(_a[i], 0, res[i], 0, cols());
         }
 
-        return result;
+        return res;
     }
 
     public static boolean equalArrays(double[][] a, double[][] b) {
