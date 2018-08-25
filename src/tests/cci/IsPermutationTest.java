@@ -3,8 +3,6 @@ package cci;
 import org.junit.Assert;
 import org.junit.Test;
 
-import static org.junit.Assert.*;
-
 public class IsPermutationTest {
     @Test
     public void execute() throws Exception {

@@ -5,7 +5,6 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-
 public class IsUniqueCharsTest {
     @Test
     public void execute() throws Exception {
