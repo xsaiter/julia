@@ -1,9 +1,10 @@
 package graphs;
 
+import common.Helper;
+
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Supplier;
-import java.util.stream.Stream;
 
 public class Graph {
     final int _nv;
@@ -12,7 +13,7 @@ public class Graph {
 
     public Graph(int nv) {
         _nv = nv;
-        _adj = newArray(_nv, () -> new LinkedList<>());
+        _adj = Helper.newArray(_nv, () -> new LinkedList<>());
     }
 
     public int nv() {
@@ -34,7 +35,7 @@ public class Graph {
     }
 
     public void traversalBFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = newArray(nv(), () -> false);
+        ArrayList<Boolean> marked = Helper.newArray(nv(), () -> false);
         Queue<Integer> q = new ArrayDeque<>(nv());
         q.add(s);
         while (!q.isEmpty()) {
@@ -51,7 +52,7 @@ public class Graph {
     }
 
     public void traversalDFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = newArray(nv(), () -> false);
+        ArrayList<Boolean> marked = Helper.newArray(nv(), () -> false);
         DFS(s, marked, visit);
     }
 
@@ -64,13 +65,5 @@ public class Graph {
                 DFS(nbr, marked, visit);
             }
         }
-    }
-
-    static <T> ArrayList<T> newArray(int capacity, Supplier<T> createValue) {
-        ArrayList<T> res = new ArrayList<>(capacity);
-        for (int i = 0; i < capacity; ++i) {
-            res.add(createValue.get());
-        }
-        return res;
     }
 }
