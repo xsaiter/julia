@@ -1,4 +1,4 @@
-package julia;
+package lia;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -6,7 +6,7 @@ import org.junit.Test;
 
 public class MatrixTest {
     @Test
-    public void set() throws Exception {
+    public void set() {
         double[][] array = {
                 {1, 1, 1, 1},
                 {2, 2, 2, 2},
@@ -19,7 +19,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void get() throws Exception {
+    public void get() {
         double[][] array = {
                 {1, 1, 1, 1},
                 {2, 2, 20, 2},
@@ -31,7 +31,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void rows() throws Exception {
+    public void rows() {
         double[][] array = {
                 {1, 1, 1, 1},
                 {2, 2, 2, 2},
@@ -43,7 +43,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void cols() throws Exception {
+    public void cols() {
         double[][] array = {
                 {1, 1, 1, 1},
                 {2, 2, 2, 2},
@@ -55,7 +55,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void multiply() throws Exception {
+    public void multiply() {
         double[][] array = {
                 {1, 1, 1, 1},
                 {2, 2, 2, 2},
@@ -74,7 +74,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void multiply_matrices() throws Exception {
+    public void multiply_matrices() {
         double[][] a1 = {
             {1, 1, 1, 1},
             {2, 2, 2, 2},
@@ -102,7 +102,7 @@ public class MatrixTest {
     }
 
     @Test
-    public void toArray() throws Exception {
+    public void toArray() {
         double expected[][] = {
                 {10, 10, 10, 10},
                 {20, 20, 20, 20},

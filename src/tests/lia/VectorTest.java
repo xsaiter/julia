@@ -1,4 +1,4 @@
-package julia;
+package lia;
 
 import org.junit.Test;
 import org.junit.Assert;

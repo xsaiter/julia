@@ -3,17 +3,14 @@ package cci;
 public class HouseRobber {
     public int execute(int[] a) {
         final int n = a.length;
-
         if (n == 0) {
             return 0;
         }
-
         if (n == 1) {
             return a[0];
         }
 
         int[] b = new int[n];
-
         b[0] = a[0];
         b[1] = Math.max(a[0], a[1]);
 

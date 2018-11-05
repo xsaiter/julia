@@ -1,4 +1,4 @@
-package julia;
+package lia;
 
 public class Matrix {
     private double[][] _a;
@@ -47,7 +47,7 @@ public class Matrix {
         return res;
     }
 
-    public Matrix mul(Matrix m){
+    public Matrix mul(Matrix m) {
         return mul(this, m);
     }
 
@@ -101,7 +101,7 @@ public class Matrix {
         return true;
     }
 
-    public Matrix copy(){
+    public Matrix copy() {
         return new Matrix(toArray());
     }
 }

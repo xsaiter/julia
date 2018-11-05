@@ -1,4 +1,4 @@
-package julia;
+package lia;
 
 import java.util.Arrays;
 import java.util.function.BiFunction;

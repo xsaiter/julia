@@ -1,4 +1,4 @@
-package julia;
+package lia;
 
 public class JacobiMethod {
 
