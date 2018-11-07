@@ -1,5 +1,7 @@
 package lia;
 
+import common.Helper;
+
 public class Matrix {
     private double[][] _a;
 
@@ -9,6 +11,10 @@ public class Matrix {
 
     public Matrix(double[][] array) {
         _a = array;
+    }
+
+    public static Matrix makeSquare(int n){
+        return new Matrix(n,n);
     }
 
     public void set(int i, int j, double value) {
@@ -52,9 +58,9 @@ public class Matrix {
     }
 
     public static Matrix mul(Matrix a, Matrix b) {
-        int l = a.rows();
-        int n = b.cols();
-        int m = a.cols();
+        final int l = a.rows();
+        final int n = b.cols();
+        final int m = a.cols();
 
         Matrix result = new Matrix(l, n);
 
@@ -80,11 +86,11 @@ public class Matrix {
     }
 
     public static boolean equalArrays(double[][] a, double[][] b) {
-        int rowsA = Matrix.rowsOf(a);
-        int colsA = Matrix.colsOf(a);
+        final int rowsA = Matrix.rowsOf(a);
+        final int colsA = Matrix.colsOf(a);
 
-        int rowsB = Matrix.rowsOf(b);
-        int colsB = Matrix.colsOf(b);
+        final int rowsB = Matrix.rowsOf(b);
+        final int colsB = Matrix.colsOf(b);
 
         if (rowsA != rowsB || colsA != colsB) {
             return false;
@@ -92,7 +98,7 @@ public class Matrix {
 
         for (int i = 0; i < rowsA; ++i) {
             for (int j = 0; j < colsA; ++j) {
-                if (Utils.NotEqualsDouble(a[i][j], b[i][j])) {
+                if (Helper.NotEqualsDouble(a[i][j], b[i][j])) {
                     return false;
                 }
             }

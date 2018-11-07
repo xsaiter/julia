@@ -1,5 +1,6 @@
 package lia;
 
+import common.Helper;
 import org.junit.Test;
 import org.junit.Assert;
 
@@ -16,21 +17,21 @@ public class VectorTest {
         Vector v = createVector();
         double value = 10;
         v.set(2, value);
-        Assert.assertEquals(value, v.get(2), Utils.EPSILON);
+        Assert.assertEquals(value, v.get(2), Helper.EPSILON);
     }
 
     @Test
     public void get() throws Exception {
         Vector v = createVector();
         double value = 3;
-        Assert.assertEquals(value, v.get(2), Utils.EPSILON);
+        Assert.assertEquals(value, v.get(2), Helper.EPSILON);
     }
 
     @Test
     public void multiply() throws Exception {
         Vector v = createVector();
         Vector v2 = v.mul(10);
-        Assert.assertArrayEquals(new double[]{10, 20, 30}, v2.toArray(), Utils.EPSILON);
+        Assert.assertArrayEquals(new double[]{10, 20, 30}, v2.toArray(), Helper.EPSILON);
     }
 
     @Test
@@ -38,7 +39,7 @@ public class VectorTest {
         Vector a = createVector();
         Vector b = createVector();
         Vector c = a.add(b);
-        Assert.assertArrayEquals(new double[]{2, 4, 6}, c.toArray(), Utils.EPSILON);
+        Assert.assertArrayEquals(new double[]{2, 4, 6}, c.toArray(), Helper.EPSILON);
     }
 
     @Test
@@ -46,7 +47,7 @@ public class VectorTest {
         Vector a = createVector();
         Vector b = createVector();
         Vector c = a.sub(b);
-        Assert.assertArrayEquals(new double[]{0, 0, 0}, c.toArray(), Utils.EPSILON);
+        Assert.assertArrayEquals(new double[]{0, 0, 0}, c.toArray(), Helper.EPSILON);
     }
 
     @Test
@@ -54,7 +55,7 @@ public class VectorTest {
         double[] array = createArray();
         Vector vector = new Vector(array);
         double[] copyArray = vector.toArray();
-        Assert.assertArrayEquals(array, copyArray, Utils.EPSILON);
+        Assert.assertArrayEquals(array, copyArray, Helper.EPSILON);
     }
 
     private static Vector createVector() {

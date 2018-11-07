@@ -1,5 +1,6 @@
 package lia;
 
+import common.Helper;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -15,7 +16,7 @@ public class MatrixTest {
         Matrix m = new Matrix(array);
         m.set(1,2, 20);
 
-        Assert.assertEquals(20, m.get(1,2), Utils.EPSILON);
+        Assert.assertEquals(20, m.get(1,2), Helper.EPSILON);
     }
 
     @Test
@@ -27,7 +28,7 @@ public class MatrixTest {
 
         Matrix m = new Matrix(array);
 
-        Assert.assertEquals(20, m.get(1,2), Utils.EPSILON);
+        Assert.assertEquals(20, m.get(1,2), Helper.EPSILON);
     }
 
     @Test

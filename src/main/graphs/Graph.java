@@ -4,7 +4,6 @@ import common.Helper;
 
 import java.util.*;
 import java.util.function.Consumer;
-import java.util.function.Supplier;
 
 public class Graph {
     final int _nv;
@@ -13,7 +12,7 @@ public class Graph {
 
     public Graph(int nv) {
         _nv = nv;
-        _adj = Helper.newArray(_nv, () -> new LinkedList<>());
+        _adj = Helper.allocateArray(_nv, () -> new LinkedList<>());
     }
 
     public int nv() {
@@ -35,7 +34,7 @@ public class Graph {
     }
 
     public void traversalBFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = Helper.newArray(nv(), () -> false);
+        ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
         Queue<Integer> q = new ArrayDeque<>(nv());
         q.add(s);
         while (!q.isEmpty()) {
@@ -52,7 +51,7 @@ public class Graph {
     }
 
     public void traversalDFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = Helper.newArray(nv(), () -> false);
+        ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
         DFS(s, marked, visit);
     }
 

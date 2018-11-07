@@ -24,13 +24,30 @@ public class Vector {
         _a[i] = value;
     }
 
-    public double get(int i) {
-        return _a[i];
+    public void setToDiv(int i, double value){
+        set(i, get(i)/value);
     }
 
-    public Vector mul(double value) {
-        double[] res = Arrays.stream(_a).map(x -> x * value).toArray();
-        return new Vector(res);
+    public void setToMul(int i, double value){
+        set(i, get(i)*value);
+    }
+
+    public void setToAdd(int i, double value){
+        set(i, get(i) + value);
+    }
+
+    public void setToSub(int i, double value){
+        set(i, get(i) - value);
+    }
+
+    public void setAll(double value){
+        for(int i = 0; i < _n; ++i){
+            _a[i] = value;
+        }
+    }
+
+    public double get(int i) {
+        return _a[i];
     }
 
     public Vector add(Vector other) {
@@ -41,27 +58,17 @@ public class Vector {
         return applyBiFunction(other, (x, y) -> x - y);
     }
 
-    private Vector applyBiFunction(Vector other, BiFunction<Double, Double, Double> fn) {
-        assertEqualLength(other);
-
-        Vector res = new Vector(_n);
-
-        for (int i = 0; i < _n; ++i) {
-            res._a[i] = fn.apply(_a[i], other._a[i]);
-        }
-
-        return res;
+    public Vector mul(double value) {
+        double[] res = Arrays.stream(_a).map(x -> x * value).toArray();
+        return new Vector(res);
     }
 
     public double mul(Vector other) {
         assertEqualLength(other);
-
         double res = 0.0;
-
         for (int i = 0; i < _n; ++i) {
             res += (this._a[i] * other._a[i]);
         }
-
         return res;
     }
 
@@ -77,6 +84,15 @@ public class Vector {
         if (_n != other._n) {
             throw new IllegalArgumentException("lengths not equal");
         }
+    }
+
+    private Vector applyBiFunction(Vector other, BiFunction<Double, Double, Double> fn) {
+        assertEqualLength(other);
+        Vector res = new Vector(_n);
+        for (int i = 0; i < _n; ++i) {
+            res._a[i] = fn.apply(_a[i], other._a[i]);
+        }
+        return res;
     }
 
     public double[] toArray() {
