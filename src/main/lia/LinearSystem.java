@@ -9,18 +9,18 @@ public class LinearSystem {
         _b = b;
     }
 
-    public Vector solve(SolveStrategy strategy) {
-        return strategy.solve(_a, _b);
+    public Vector solve(Solver solver) {
+        return solver.solve(_a, _b);
     }
 
-    public interface SolveStrategy {
+    public interface Solver {
         Vector solve(Matrix a, Vector b);
 
-        static SolveStrategy makeJacobiMethod() {
+        static Solver makeJacobiMethod() {
             return new JacobiMethod();
         }
 
-        static SolveStrategy makeGaussSeidelMethod() {
+        static Solver makeGaussSeidelMethod() {
             return new GaussSeidelMethod();
         }
     }

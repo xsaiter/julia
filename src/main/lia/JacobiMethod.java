@@ -2,7 +2,7 @@ package lia;
 
 import common.Helper;
 
-public class JacobiMethod implements LinearSystem.SolveStrategy {
+public class JacobiMethod implements LinearSystem.Solver {
 
     @Override
     public Vector solve(Matrix a, Vector b) {

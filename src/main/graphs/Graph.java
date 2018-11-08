@@ -8,11 +8,15 @@ import java.util.function.Consumer;
 public class Graph {
     final int _nv;
     int _ne;
-    ArrayList<LinkedList<Integer>> _adj;
+    Store _store;
 
     public Graph(int nv) {
+        this(nv, Store.forIndex(nv));
+    }
+
+    public Graph(int nv, Store store) {
         _nv = nv;
-        _adj = Helper.allocateArray(_nv, () -> new LinkedList<>());
+        _store = store;
     }
 
     public int nv() {
@@ -24,18 +28,18 @@ public class Graph {
     }
 
     public void addEdge(int a, int b) {
-        _adj.get(a).add(b);
-        _adj.get(b).add(a);
+        _store.addVertex(a, b);
+        _store.addVertex(b, a);
         ++_ne;
     }
 
     public Collection<Integer> neighbors(int v) {
-        return _adj.get(v);
+        return _store.neighbors(v);
     }
 
     public void traversalBFS(int s, Consumer<Integer> visit) {
         ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
-        Queue<Integer> q = new ArrayDeque<>(nv());
+        Queue<Integer> q = new ArrayDeque<>(_nv);
         q.add(s);
         while (!q.isEmpty()) {
             int p = q.poll();
@@ -51,7 +55,7 @@ public class Graph {
     }
 
     public void traversalDFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
+        ArrayList<Boolean> marked = Helper.allocateArray(_nv, () -> false);
         DFS(s, marked, visit);
     }
 
