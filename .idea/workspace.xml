@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e398d5c3-9ff5-478a-98c7-df2324d60a3f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/graphs/Adj.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/graphs/Edge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphs/Edge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/graphs/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphs/Graph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/graphs/ListAdj.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/lia/GaussSeidelMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lia/GaussSeidelMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/lia/JacobiMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lia/JacobiMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/lia/LinearSystem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/lia/LinearSystem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/lia/JacobiMethodTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/lia/JacobiMethodTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/graphs/Store.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphs/Store.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/graphs/WeightedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/graphs/WeightedGraph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -38,13 +35,13 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="71" />
-          <entry key="java" value="9443" />
+          <entry key="java" value="9610" />
           <entry key="kt" value="101" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="9443" />
+          <entry key="JAVA" value="9610" />
           <entry key="Kotlin" value="101" />
           <entry key="PLAIN_TEXT" value="71" />
         </counts>
@@ -52,21 +49,42 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="2" />
-          <entry key="java" value="192" />
+          <entry key="java" value="198" />
           <entry key="kt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="JAVA" value="192" />
+          <entry key="JAVA" value="198" />
           <entry key="Kotlin" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/graphs/Graph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="570">
+              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#194#195#0" expanded="true" />
+                <element signature="e#238#239#0" expanded="true" />
+                <element signature="e#350#351#0" expanded="true" />
+                <element signature="e#376#377#0" expanded="true" />
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#425#426#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
+                <element signature="e#644#645#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -89,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/cci/TurtleTravel.java" />
         <option value="$PROJECT_DIR$/src/tests/cci/StackWithMinTest.java" />
         <option value="$PROJECT_DIR$/src/tests/cci/TurtleTravelTest.java" />
         <option value="$PROJECT_DIR$/src/tests/cci/IsPermutationTest.java" />
@@ -115,7 +132,6 @@
         <option value="$PROJECT_DIR$/src/main/julia/graphs/Graph.java" />
         <option value="$PROJECT_DIR$/src/main/julia/graphs/ListAdj.java" />
         <option value="$PROJECT_DIR$/src/main/julia/graphs/Adj.java" />
-        <option value="$PROJECT_DIR$/src/main/graphs/Edge.java" />
         <option value="$PROJECT_DIR$/src/tests/graphs/GraphTest.java" />
         <option value="$PROJECT_DIR$/src/main/common/UF.java" />
         <option value="$PROJECT_DIR$/src/main/lia/Matrix.java" />
@@ -137,9 +153,11 @@
         <option value="$PROJECT_DIR$/src/main/graphs/IntStore.java" />
         <option value="$PROJECT_DIR$/src/main/graphs/DenseStore.java" />
         <option value="$PROJECT_DIR$/src/main/graphs/SparseStore.java" />
-        <option value="$PROJECT_DIR$/src/main/graphs/Store.java" />
         <option value="$PROJECT_DIR$/src/main/graphs/IndexStore.java" />
+        <option value="$PROJECT_DIR$/src/main/graphs/Store.java" />
+        <option value="$PROJECT_DIR$/src/main/graphs/Edge.java" />
         <option value="$PROJECT_DIR$/src/main/graphs/Graph.java" />
+        <option value="$PROJECT_DIR$/src/main/graphs/WeightedGraph.java" />
       </list>
     </option>
   </component>
@@ -211,7 +229,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541685379218" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541685997625" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -539,6 +557,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1050" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17864583" />
       <window_info id="Structure" order="1" weight="0.25" />
@@ -992,44 +1011,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/graphs/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="20" lean-forward="true" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#194#195#0" expanded="true" />
-            <element signature="e#238#239#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/graphs/Digraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="22" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/graphs/WeightedGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="26" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/graphs/Store.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#221#222#0" expanded="true" />
-            <element signature="e#261#262#0" expanded="true" />
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,15 +1038,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/graphs/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/main/graphs/Store.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+        <state relative-caret-position="210">
+          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
           <folding>
-            <element signature="e#150#151#0" expanded="true" />
-            <element signature="e#175#176#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#223#224#0" expanded="true" />
+            <element signature="e#263#264#0" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1070,6 +1057,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/graphs/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#175#176#0" expanded="true" />
+            <element signature="e#197#198#0" expanded="true" />
+            <element signature="e#222#223#0" expanded="true" />
+            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/graphs/WeightedGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#94#95#0" expanded="true" />
+            <element signature="e#135#136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/graphs/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#194#195#0" expanded="true" />
+            <element signature="e#238#239#0" expanded="true" />
+            <element signature="e#350#351#0" expanded="true" />
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+            <element signature="e#644#645#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -39,7 +39,7 @@ public class Graph {
 
     public void traversalBFS(int s, Consumer<Integer> visit) {
         ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
-        Queue<Integer> q = new ArrayDeque<>(_nv);
+        Queue<Integer> q = new ArrayDeque<>(nv());
         q.add(s);
         while (!q.isEmpty()) {
             int p = q.poll();
@@ -55,7 +55,7 @@ public class Graph {
     }
 
     public void traversalDFS(int s, Consumer<Integer> visit) {
-        ArrayList<Boolean> marked = Helper.allocateArray(_nv, () -> false);
+        ArrayList<Boolean> marked = Helper.allocateArray(nv(), () -> false);
         DFS(s, marked, visit);
     }
 
