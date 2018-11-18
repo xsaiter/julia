@@ -1,10 +1,8 @@
 package cci;
 
-import common.ListNode;
+import cci.common.ListNode;
 import org.junit.Assert;
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 public class NthToLastTest {
     @Test

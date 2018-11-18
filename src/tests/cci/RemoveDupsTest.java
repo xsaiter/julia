@@ -1,6 +1,6 @@
 package cci;
 
-import common.ListNode;
+import cci.common.ListNode;
 import org.junit.Assert;
 import org.junit.Test;
 

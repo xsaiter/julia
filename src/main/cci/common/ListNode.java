@@ -1,4 +1,4 @@
-package common;
+package cci.common;
 
 public class ListNode {
     private final int _data;

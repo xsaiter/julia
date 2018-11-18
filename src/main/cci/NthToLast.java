@@ -1,6 +1,6 @@
 package cci;
 
-import common.ListNode;
+import cci.common.ListNode;
 
 public class NthToLast {
     public ListNode execute(final ListNode node, int n) {

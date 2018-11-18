@@ -1,24 +1,41 @@
 package graphs;
 
-public class Edge {
-    final int _a, _b;
-    final double _w;
+public class Edge<V> {
+    final V _a, _b;
 
-    public Edge(int a, int b, double w) {
+    public Edge(V a, V b) {
         _a = a;
         _b = b;
-        _w = w;
     }
 
-    public int A() {
+    public V a() {
         return _a;
     }
 
-    public int B() {
+    public V b() {
         return _b;
     }
 
-    public double W() {
-        return _w;
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + _a.hashCode();
+        result = 31 * result + _b.hashCode();
+        return result;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (this.getClass() != obj.getClass()) {
+            return false;
+        }
+        var e = (Edge<V>) obj;
+        return _a.equals(e._a) && _b.equals(e._b);
     }
 }

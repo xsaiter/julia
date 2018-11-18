@@ -3,7 +3,7 @@ package common;
 import java.util.Set;
 import java.util.TreeSet;
 
-public class UF<T extends Comparable<T>> {
+public class DisjointSet<T extends Comparable<T>> {
     final Set<Entry> _entries = new TreeSet<>();
 
     public void add(T data) {

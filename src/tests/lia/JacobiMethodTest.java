@@ -4,6 +4,8 @@ import common.Helper;
 import org.junit.Assert;
 import org.junit.Test;
 
+
+
 public class JacobiMethodTest {
 
     @Test
@@ -13,7 +15,7 @@ public class JacobiMethodTest {
                 {5, 7}};
         var a = new Matrix(aa);
 
-        double[] bb = {11,13};
+        double[] bb = {11, 13};
         var b = new Vector(bb);
 
         var res = LinearSystem.Solver.makeJacobiMethod().solve(a, b);
