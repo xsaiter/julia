@@ -1,12 +1,13 @@
 package graphs;
 
 public class DirectedGraph extends Graph {
-    public DirectedGraph(int nv) {
-        super(nv);
+    @Override
+    public void addEdge(int a, int b) {
+        insertEdge(a, b);
     }
 
     @Override
-    public void addEdge(int a, int b) {
-        _adj.get(a).add(b);
+    public boolean isDirected() {
+        return true;
     }
 }
