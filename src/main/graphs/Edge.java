@@ -1,6 +1,6 @@
 package graphs;
 
-public class Edge<V> {
+public class Edge<V> implements AbstractEdge<V> {
     final V _a, _b;
 
     public Edge(V a, V b) {

@@ -2,12 +2,11 @@ package graphs;
 
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.stream.Stream;
 
-public abstract class Graph {
+public abstract class Graph<V, E extends AbstractEdge<V>> {
     protected int _nv;
     protected int _ne;
-    protected final HashMap<Integer, HashSet<Integer>> _adj = new HashMap<>();
+    protected final HashMap<V, HashSet<E>> _adj = new HashMap<>();
 
     public int nv() {
         return _nv;
@@ -17,36 +16,38 @@ public abstract class Graph {
         return _ne;
     }
 
-    public abstract void addEdge(int a, int b);
+    public abstract void addEdge(E edge);
 
-    public void addVertex(int v) {
+    protected void insertEdge(V from, E edge) {
+        insertVertex(edge.a());
+        insertVertex(edge.b());
+
+        var list = _adj.get(from);
+        if (!list.contains(edge.b())) {
+            list.add(edge);
+            ++_ne;
+        }
+    }
+
+    public void addVertex(V v) {
         insertVertex(v);
     }
 
-    protected void insertVertex(int v) {
+    protected void insertVertex(V v) {
         if (!_adj.containsKey(v)) {
             _adj.put(v, new HashSet<>());
             ++_nv;
         }
     }
 
-    protected void insertEdge(int from, int to) {
-        insertVertex(from);
-        insertVertex(to);
-        var list = _adj.get(from);
-        if (!list.contains(to)) {
-            list.add(to);
-            ++_ne;
-        }
+    protected void addEdgeForUndirected(E edge){
+        insertEdge(edge.a(), edge);
+        insertEdge(edge.b(), edge);
     }
 
-    public Stream<Integer> neighbors(int v) {
-        var list = _adj.get(v);
-        if (list == null) {
-            return Stream.empty();
-        }
-        return list.stream();
+    protected void addEdgeForDirected(E edge) {
+        insertEdge(edge.a(), edge);
     }
 
-    public abstract boolean isDirected();
+    public abstract Directions direction();
 }

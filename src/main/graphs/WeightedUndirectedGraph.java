@@ -1,8 +1,8 @@
 package graphs;
 
-public class UndirectedGraph<V> extends Graph<V, Edge<V>> {
+public class WeightedUndirectedGraph<V> extends Graph<V, WeightedEdge<V>> {
     @Override
-    public void addEdge(Edge<V> edge) {
+    public void addEdge(WeightedEdge<V> edge) {
         addEdgeForUndirected(edge);
     }
 
